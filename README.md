@@ -11,3 +11,7 @@ A simple Rock, Paper, Scissors game implemented using HTML, CSS, and JavaScript.
 ## Contributors
 
 - Thanks to [Kushagra Gupta](https://github.com/kushagragupta04) for the valuable feedback and contributions!
+
+## Screenshot
+
+![Game Screenshot](https://github.com/ashishnanda19/Rock-Paper-Scissors/blob/main/Screenshot.jpeg)
