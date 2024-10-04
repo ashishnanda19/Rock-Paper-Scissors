@@ -1,3 +1,9 @@
+const score = {
+    Wins: 0,
+    Losses: 0,
+    Ties: 0
+};
+
 function playGame(userMove) {
     const randomNumber = Math.random(); 
     let computerMove = '';
@@ -25,16 +31,42 @@ function playGame(userMove) {
         result = 'You Lose';
     }
 
+    if(result === 'You Win'){
+        score.Wins+=1;
+    }
+    else if(result === 'You Lose'){
+        score.Losses+=1;
+    }
+    else if(result === 'Tie') {
+        score.Ties+=1;
+    }
+
     ans(userMove, computerMove, result);
+
 }
 
+function resetGame() {
+    score.Wins = 0;
+    score.Losses = 0;
+    score.Ties = 0;
+
+    ans('None', 'None', 'Scores Reset');
+}
 
 function ans(u, c, a) {
     const ans = document.getElementById("answer");
     ans.innerHTML = "";
     const box = document.createElement("div");
 
-    box.innerHTML = `You chose ${u}, computer chose ${c} so ${a}`;
+    box.innerHTML = `
+    You chose ${u}, computer chose ${c} so ${a} <br>
+    <div style="text-align: center;">
+        <br>
+        Wins: ${score.Wins} <br>
+        Losses: ${score.Losses} <br>
+        Ties: ${score.Ties}
+    </div>`;
+
 
     ans.append(box);
 }
