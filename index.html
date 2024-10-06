@@ -1,32 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissor</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <p>
-            <b>Rock Paper Scissors</b>
-        </p>
-        <div class="buttons">
-            <button class="button1" onclick="playGame('Rock')">Rock</button>
-            <button  class="button2" onclick="playGame('Paper')">Paper</button>
-            <button class="button3" onclick="playGame('Scissors')">Scissors</button>
-            <br>
-            <button class="button4" onclick="resetGame()">Reset</button>
+        <p class="title">Rock Paper Scissors</p>
+        <div class="button-container">
+            <button onclick="
+      playGame('rock');
+    " class="move-button">
+                <img src="images/rock-emoji.png" class="move-icon">
+            </button>
+
+            <button onclick="
+      playGame('paper');
+    " class="move-button">
+                <img src="images/paper-emoji.png" class="move-icon">
+            </button>
+
+            <button onclick="
+      playGame('scissors');
+    " class="move-button">
+                <img src="images/scissors-emoji.png" class="move-icon">
+            </button>
         </div>
-        <div></div>
-        <div id="answer"></div>
+
+        <p class="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score score"></p>
+
+        <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    " class="reset-score-button">Reset Score</button>
     </div>
 
     <script src="script.js"></script>
