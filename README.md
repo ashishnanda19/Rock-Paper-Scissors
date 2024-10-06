@@ -14,4 +14,4 @@ A simple Rock, Paper, Scissors game implemented using HTML, CSS, and JavaScript.
 
 ## Screenshot
 
-![Game Screenshot](https://github.com/ashishnanda19/Rock-Paper-Scissors/blob/main/Screenshot.jpeg)
+![Game Screenshot](https://github.com/ashishnanda19/Rock-Paper-Scissors/blob/main/images/Screenshot.png)
